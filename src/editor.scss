@@ -1,0 +1,53 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-buytiti-buytitibaner {
+	border: 1px dotted #f00;
+}
+
+.box-h1{
+	font-size: 2.8rem !important;
+  }
+
+  .box-h5{
+	font-size: 1.7rem !important;
+	margin-top: -1rem !important;
+  }
+  .box-p{
+	margin-top: -2.5rem !important;
+  }
+
+  .slider-container {
+	position: relative !important;
+}
+
+
+.slider-container {
+    position: relative;
+    /* ...otros estilos... */
+}
+
+.slider-nav {
+	display: flex;
+	justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.nav-dot{
+	margin-right: .3rem;
+	width: .3rem;
+    height: .3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.nav-dot:hover{
+	cursor: pointer;
+}

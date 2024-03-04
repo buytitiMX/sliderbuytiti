@@ -1,0 +1,218 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-buytiti-buytitibaner {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+}
+
+/* Agrega estilos personalizados según sea necesario */
+.my-slider {
+	position: relative;
+	overflow: hidden;
+}
+
+.slider-container {
+	display: flex;
+}
+
+.slide {
+	flex: 0 0 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	display: none;
+}
+
+.slide.prev {
+	transform: translateX(-100%);
+	animation: slideOutLeft 0.5s forwards;
+}
+
+.slide.active {
+	display: block;
+	animation: slideInRight 0.5s forwards;
+}
+
+.slide.next {
+	transform: translateX(100%);
+	animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideOutLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes slideOutRight {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+  /* Agrega otros estilos según sea necesario */
+  .container-gti{
+	display: flex;
+  }
+  
+  .gimage{
+	width: 30rem;
+	margin-left: 20rem;
+  }
+
+  .box-h1{
+	font-size: 2.8rem !important;
+  }
+
+  .box-h5{
+	font-size: 1.7rem !important;
+	margin-top: -1rem !important;
+  }
+  .box-p{
+	margin-top: -.5rem !important;
+  }
+
+.slider-container {
+	position: relative !important;
+}
+
+
+/* Estilos boton*/
+
+/*** ESTILOS BOTÓN GROW SKEW ***/
+.ov-btn-grow-skew {
+	background: black; /* color de fondo */
+	color: white; /* color de fuente */
+	border: 1px solid black ; /* tamaño y color de borde */
+	padding: 16px 20px;
+	border-radius: 13px; /* redondear bordes */
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	height: 2rem;
+  align-items: center;
+  display: flex;
+  width: 6.5rem;
+  text-decoration: none !important;
+  }
+  .ov-btn-grow-skew:hover {
+	color: black;/* color de fuente hover */
+	border: 1px solid white;
+	cursor: pointer;
+  }
+  .ov-btn-grow-skew::after {
+	content: "";
+	background: white; /* color de fondo hover */
+	position: absolute;
+	z-index: -1;
+	padding: 16px 20px;
+	display: block;
+	left: -20%;
+	right: -20%;
+	top: 0;
+	bottom: 0;
+	transform: skewX(-45deg) scale(0, 1);
+	transition: all 0.3s ease;
+  }
+  .ov-btn-grow-skew:hover::after {
+	transition: all 0.3s ease-out;
+	transform: skewX(-45deg) scale(1, 1);
+  }
+
+
+  @keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.h1-slide-down {
+    animation-name: slideDown;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.p-slide-right {
+    animation-name: slideRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.img-zoom-in {
+    animation-name: zoomIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.slider-container {
+    position: relative;
+    /* ...otros estilos... */
+}
+
+.slider-nav {
+	display: flex;
+	justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.nav-dot{
+	margin-right: .3rem;
+	width: .3rem;
+    height: .3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.nav-dot:hover{
+	cursor: pointer;
+}

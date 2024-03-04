@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "buytiti/buytitibaner",
+	"version": "0.1.0",
+	"title": "Buytiti - Baner Animado",
+	"category": "widgets",
+	"icon": "tide",
+	"description": "Este Plugin Añade la estructura de un baner animado",
+	"example": {},
+	"supports": {
+	  "html": false
+	},
+	"textdomain": "buytitibaner",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+	  "slides": {
+		"type": "array",
+		"default": [
+		  {
+			"title": "Slide 1",
+			"h5": "",
+			"p": ""
+		  },
+		  {
+			"title": "Slide 2",
+			"h5": "",
+			"p": ""
+		  },
+		  {
+			"title": "Slide 3",
+			"h5": "",
+			"p": ""
+		  }
+		],
+		"items": {
+		  "type": "object",
+		  "default": {
+			"title": "",
+			"h5": "",
+			"p": ""
+		  },
+		  "properties": {
+			"title": {
+			  "type": "string"
+			},
+			"h5": {
+			  "type": "string"
+			},
+			"p": {
+			  "type": "string"
+			},
+			"button": {
+				"type": "string"
+			},
+			"image": {
+				"type": "string"
+			},
+			"color": {
+				"type": "string"
+			},
+			"h1Color": {
+				"type": "string"
+			},
+			"h5Color": {
+				"type": "string"
+			},
+			"pColor": {
+				"type": "string"
+			}
+		  }
+		}
+	  }
+	}
+  }
+  
