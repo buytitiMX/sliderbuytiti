@@ -4,10 +4,24 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+
+ body, html, .my-slider, .slider-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 .wp-block-buytiti-buytitibaner {
 	background-color: #21759b;
 	color: #fff;
 	padding: 2px;
+}
+.entry-content.clear{
+	width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 /* Agrega estilos personalizados según sea necesario */
@@ -70,10 +84,11 @@
 }
 
   /* Agrega otros estilos según sea necesario */
-  .container-gti{
-	display: flex;
-  }
-  
+  .container-gti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .gimage{
 	width: 30rem;
 	margin-left: 20rem;
@@ -100,7 +115,7 @@
 
 /*** ESTILOS BOTÓN GROW SKEW ***/
 .ov-btn-grow-skew {
-	background: black; /* color de fondo */
+	background: #1a1a1a; /* color de fondo */
 	color: white; /* color de fuente */
 	border: 1px solid black ; /* tamaño y color de borde */
 	padding: 16px 20px;
@@ -115,7 +130,7 @@
   text-decoration: none !important;
   }
   .ov-btn-grow-skew:hover {
-	color: black;/* color de fuente hover */
+	color: #1a1a1a;/* color de fuente hover */
 	border: 1px solid white;
 	cursor: pointer;
   }
@@ -216,4 +231,35 @@
 
 .nav-dot:hover{
 	cursor: pointer;
+}
+
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 400px) {
+    .container-gti{
+		display: flex;
+		flex-direction: column;
+	}
+	.gimage{
+		width: 15rem;
+		margin-left: 0rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	.box-h1{
+		font-size: 2rem !important;
+		text-align: center;
+	}
+	.box-h5{
+		font-size: 1.4rem !important;
+		margin-top: -1rem !important;
+	}
+	.box-p{
+		margin-top: -.5rem !important;
+		text-align: justify;
+	}
+	.cont-b{
+		display: flex;
+		justify-content: center;
+	}
 }
