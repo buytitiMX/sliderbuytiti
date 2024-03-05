@@ -88,6 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+	height: 30rem !important;
 }
   .gimage{
 	width: 30rem;
@@ -239,6 +240,7 @@
     .container-gti{
 		display: flex;
 		flex-direction: column;
+		height: 36rem !important;
 	}
 	.gimage{
 		width: 15rem;
@@ -261,5 +263,33 @@
 	.cont-b{
 		display: flex;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.gimage{
+		width: 15rem !important;
+		margin-left: 0rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+	.box-h1{
+		font-size: 2rem !important;
+		text-align: center;
+	}
+	.box-h5{
+		font-size: 1.4rem !important;
+		margin-top: -1rem !important;
+	}
+	.box-p{
+		margin-top: -.5rem !important;
+		text-align: justify;
+	}
+}
+
+@media screen and (max-width: 850px) {
+    .gimage{
+		width: 30rem;
+		margin-left: 10rem !important;
 	}
 }

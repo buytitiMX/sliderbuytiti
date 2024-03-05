@@ -3,6 +3,7 @@ import { InspectorControls, RichText } from "@wordpress/block-editor";
 import { PanelBody, ColorPicker } from "@wordpress/components";
 import { TextControl } from "@wordpress/components";
 import { MediaUpload } from "@wordpress/block-editor";
+import { Button } from "@wordpress/components";
 
 const MySlider = ({ attributes, setAttributes }) => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -93,6 +94,25 @@ const MySlider = ({ attributes, setAttributes }) => {
 							/>
 						</React.Fragment>
 					))}
+					<Button
+			isPrimary
+			onClick={() => {
+				const newSlides = [...attributes.slides, {
+					title: "",
+					h5: "",
+					p: "",
+					button: "",
+					image: "",
+					color: "",
+					h1Color: "",
+					h5Color: "",
+					pColor: ""
+				}];
+				setAttributes({ ...attributes, slides: newSlides });
+			}}
+		>
+			Añadir Slide
+		</Button>
 				</PanelBody>
 			</InspectorControls>
 

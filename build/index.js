@@ -24,6 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const MySlider = ({
   attributes,
   setAttributes
@@ -91,7 +92,26 @@ const MySlider = ({
     }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
       onClick: open
     }, "Seleccionar imagen")
-  }))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+    isPrimary: true,
+    onClick: () => {
+      const newSlides = [...attributes.slides, {
+        title: "",
+        h5: "",
+        p: "",
+        button: "",
+        image: "",
+        color: "",
+        h1Color: "",
+        h5Color: "",
+        pColor: ""
+      }];
+      setAttributes({
+        ...attributes,
+        slides: newSlides
+      });
+    }
+  }, "A\xF1adir Slide"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "slider-container"
   }, attributes.slides.map((slide, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: index,

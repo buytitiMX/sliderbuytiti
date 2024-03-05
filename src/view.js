@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const slides = Array.from(slider.querySelectorAll('.slide'));
         const navDots = Array.from(slider.querySelectorAll('.nav-dot'));
         let currentSlide = 0;
+        let lastTimestamp = 0;
 
         const goToSlide = (index) => {
             slides[currentSlide].classList.remove('active');
@@ -14,14 +15,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
             navDots[currentSlide].classList.add('active');
         };
 
-        const nextSlide = () => {
-            goToSlide((currentSlide + 1) % slides.length);
+        const nextSlide = (timestamp) => {
+            if (!lastTimestamp || timestamp - lastTimestamp >= 5000) {
+                goToSlide((currentSlide + 1) % slides.length);
+                lastTimestamp = timestamp;
+            }
+
+            requestAnimationFrame(nextSlide);
         };
 
         navDots.forEach((dot, index) => {
             dot.addEventListener('click', () => goToSlide(index));
         });
 
-        setInterval(nextSlide, 5000); // Cambia el slide cada 5 segundos
+        requestAnimationFrame(nextSlide);
     });
 });
